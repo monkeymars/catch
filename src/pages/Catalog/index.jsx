@@ -7,11 +7,19 @@ const CatalogPageIndex = () => {
   return (
     <>
       <Grid container>
-        <Grid.Column width={12}>
+        {/* Heading */}
+        <Grid.Column width={16}>
           <ListHeading/>
         </Grid.Column>
+
+        {/* Catalog List */}
         <Grid.Column width={12}>
           <ProductCard/>
+        </Grid.Column>
+
+        {/* Sidebar */}
+        <Grid.Column width={4}>
+          Sidebar
         </Grid.Column>
       </Grid>
     </>

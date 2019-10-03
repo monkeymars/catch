@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductCard from '../../components/Productard'
 import ListHeading from './components/ListHeading'
+import ShoppingCartComponent from '../../components/ShoppingCart'
 import { Grid } from 'semantic-ui-react'
 
 const CatalogPageIndex = () => {
@@ -19,7 +20,7 @@ const CatalogPageIndex = () => {
 
         {/* Sidebar */}
         <Grid.Column width={4}>
-          Sidebar
+          <ShoppingCartComponent/>
         </Grid.Column>
       </Grid>
     </>

@@ -4,14 +4,12 @@ import { Header } from 'semantic-ui-react'
 
 const ListHeadingComponent = metaData => {
   return (
-    <div>
-      <Header as='h3' disabled>Showing results for {'"{{Query}}"'}
-        <Header.Subheader>
-          <div>Page 1 of 15</div>
-          <div>Showing 15 of 30</div>
-        </Header.Subheader>
-      </Header>
-    </div>
+    <Header as='h3' disabled>Showing results for {'"{{Query}}"'}
+      <Header.Subheader>
+        <div>Page 1 of 15</div>
+        <div>Showing 15 of 30</div>
+      </Header.Subheader>
+    </Header>
   )
 }
 

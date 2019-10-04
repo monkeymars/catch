@@ -6,8 +6,7 @@ import { Grid } from 'semantic-ui-react'
 
 const CatalogPageIndex = () => {
   return (
-    <>
-      <Grid container>
+    <Grid container>
         {/* Heading */}
         <Grid.Column width={16}>
           <ListHeading/>
@@ -15,7 +14,11 @@ const CatalogPageIndex = () => {
 
         {/* Catalog List */}
         <Grid.Column width={12}>
-          <ProductCard/>
+          <Grid container>
+            <Grid.Column width={4}>
+              <ProductCard/>
+            </Grid.Column>
+          </Grid>
         </Grid.Column>
 
         {/* Sidebar */}
@@ -23,7 +26,6 @@ const CatalogPageIndex = () => {
           <ShoppingCartComponent/>
         </Grid.Column>
       </Grid>
-    </>
   )
 }
 

@@ -8,12 +8,28 @@ export const addCart = (product) => {
   }
 }
 
-export const removeCart = (product, index) => {
+export const addQty = (product) => {
+  return {
+    type: "ADD_ITEM_QTY",
+    payload: {
+      product: product
+    }
+  }
+}
+
+export const removeQty = (product) => {
+  return {
+    type: "REMOVE_ITEM_QTY",
+    payload: {
+      product: product
+    }
+  }
+}
+
+export const removeItem = (product) => {
   return {
       type: "REMOVE_ITEM",
       payload: {
-          index: index,
-          price: product.price,
           product: product
       }
   }

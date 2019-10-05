@@ -1,26 +1,46 @@
 const cartReducer = (state = {
-  totals: 0,
   listProduct: []
 }, action) => {
   console.log(action)
   switch (action.type) {
       case "ADD_ITEM":
-          state = {
-              ...state,
-              totals: state.totals + action.payload.price,
-              listProduct: [...state.listProduct, action.payload.product]
-          };
-          break;
+        state = {
+          ...state,
+          listProduct: [...state.listProduct, action.payload.product]
+        };
+        break;
+
+      case "ADD_ITEM_QTY":
+        state = {
+          ...state,
+          listProduct: state.listProduct.map(product => {
+            console.log('listProduct', product)
+            return product.id === action.payload.product.id
+              ? {...product, qty: product.qty + 1 }
+              : product
+            })
+          }
+        break;
+
+      case "REMOVE_ITEM_QTY":
+        state = {
+          ...state,
+          listProduct: state.listProduct.map(product => {
+            return product.id === action.payload.product.id
+              ? {...product, qty: product.qty - 1 }
+              : product
+          })
+        }
+        break;
 
       case "REMOVE_ITEM":
-          state = {
-              ...state,
-              totals: state.totals - action.payload.price,
-              listProduct: state.listProduct.filter((item, idx) => {
-                  return idx !== action.payload.index;
-              })
-          }
-          break;
+        state = {
+          ...state,
+          listProduct: state.listProduct.filter(product => {
+              return product.id !== action.payload.product.id;
+          })
+        }
+        break;
       default:
           break;
 

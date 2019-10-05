@@ -20,3 +20,11 @@
 .App-link {
   color: #09d3ac;
 }
+
+.m_t_sm {
+  margin-top: 8px;
+}
+
+.btn-group__cart-actions span {
+  margin-right: 8px;
+}

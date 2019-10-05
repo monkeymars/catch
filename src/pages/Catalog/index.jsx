@@ -4,7 +4,6 @@ import ListHeading from './components/ListHeading'
 import ShoppingCartComponent from '../../components/ShoppingCart'
 import { Grid } from 'semantic-ui-react'
 import MOCK_DATA from '../../services/data.json'
-console.log('MOCK_DATA', MOCK_DATA)
 
 const CatalogPageIndex = () => {
   const [catalog, setCatalog] = useState([])

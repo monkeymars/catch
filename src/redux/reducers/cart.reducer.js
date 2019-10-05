@@ -1,7 +1,6 @@
 const cartReducer = (state = {
   listProduct: []
 }, action) => {
-  console.log(action)
   switch (action.type) {
       case "ADD_ITEM":
         state = {

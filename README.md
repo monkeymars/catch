@@ -11,7 +11,7 @@
     ├── src
     │   ├── components            # components that can be used globaly
     │       ├── ProductCard       # Card for product tuple
-    │       └── ShoppingCart      # Show cart items (Qty, product name, price and total)
+    │       └── ShoppingCart      # Show cart items (qty, product name, price and total)
     │   ├── pages                 # this directory is used to differentiate code based on page url
     │       ├── Catalog           # page: catalog
     │           ├── components    # this compoenent directory is used only for specific pages
@@ -22,7 +22,7 @@
     │   ├── redux                 # this directory is used to put actions & reducers
     │       ├── actions           # cart actions (addToCart, addQty, removeQty, removeItem)
     │       └── reducers          # cart reducers
-    │   ├── services              # directory hold services (http, axios, etc)
+    │   ├── services              # directory hold global services (eg: http method, axios, etc)
     │   ├── index.js              # react app entry point
     │   ├── store.js              # redux store
     │   └── ...

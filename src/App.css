@@ -32,3 +32,26 @@
 .btn-group__cart-actions i {
   cursor: pointer;
 }
+
+.add-to-cart {
+  position: absolute;
+  top: 115px;
+  width: 105px !important;
+  right: 5px;
+}
+
+.sold-out {
+  position: absolute;
+  top: 115px;
+  text-transform: uppercase !important;
+  width: 105px !important;
+  right: 5px;
+}
+
+.add-to-cart {
+  display: none !important;
+}
+
+.product-card:hover .add-to-cart {
+  display: block !important;
+}

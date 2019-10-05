@@ -7,18 +7,18 @@ import currencyFormatter from 'currency-formatter'
 
 const ProductCardComponent = ({productDetail, addProduct}) => {
   return (
-    <Card>
+    <Card className="product-card">
       {/* Product Image */}
       <Image src={productDetail.imageUrl} wrapped ui={false} />
 
       {/* Add to Cart */}
       {productDetail.quantityAvailable ? (
-        <Button onClick={() => addProduct(productDetail)}
+        <Button className="add-to-cart" onClick={() => addProduct(productDetail)}
           color='teal' size='mini'>
           Add to Cart
         </Button>
       ):(
-        <Button disabled size='mini'>Sold Out</Button>
+        <Button className="sold-out" color="grey" size='mini'>Sold Out</Button>
       )}
 
       {/* Product Name */}

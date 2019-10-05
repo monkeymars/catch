@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ProductCard from '../../components/Productard'
+import ProductCard from '../../components/ProductCard'
 import ListHeading from './components/ListHeading'
 import ShoppingCartComponent from '../../components/ShoppingCart'
 import { Grid } from 'semantic-ui-react'
@@ -46,9 +46,11 @@ const CatalogPageIndex = () => {
         {/* Catalog List */}
         <Grid.Column width={12}>
           <Grid container>
-            <Grid.Column width={4}>
-              <ProductCard/>
-            </Grid.Column>
+            {catalog.map(product => (
+              <Grid.Column key={product.id} width={4}>
+                <ProductCard productDetail={product}/>
+              </Grid.Column>
+            ))}
           </Grid>
         </Grid.Column>
 

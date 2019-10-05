@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Header, Card, Image, Button } from 'semantic-ui-react'
 
 const ProductCardComponent = ({productDetail}) => {
-  console.log(productDetail)
   return (
     <Card>
       <Image src={productDetail.imageUrl} wrapped ui={false} />

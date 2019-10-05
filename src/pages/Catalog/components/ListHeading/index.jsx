@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { Header } from 'semantic-ui-react'
 
-const ListHeadingComponent = metaData => {
+const ListHeadingComponent = ({metaData}) => {
   return (
-    <Header as='h3' disabled>Showing results for {'"{{Query}}"'}
+    <Header as='h3' disabled>Showing results for {metaData.query}
       <Header.Subheader>
-        <div>Page 1 of 15</div>
-        <div>Showing 15 of 30</div>
+        <div>Page {metaData.page} of {metaData.pages}</div>
+        <div>Showing 36 of {metaData.total}</div>
       </Header.Subheader>
     </Header>
   )
 }
 
 ListHeadingComponent.propTypes = {
-  metaData: PropTypes.object.isRequired
+  data: PropTypes.object
 }
 
 export default ListHeadingComponent

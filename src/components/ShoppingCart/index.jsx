@@ -59,7 +59,7 @@ const ShoppingCartComponent = ({
               </div>
             </Grid.Column>
             <Grid.Column width={4}>
-              {currencyFormatter.format(product.salePrice, { code: 'USD' })}
+              {currencyFormatter.format(product.salePrice * product.qty, { code: 'USD' })}
             </Grid.Column>
           </Grid>
         ))}

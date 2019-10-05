@@ -13,12 +13,12 @@
     │       ├── ProductCard       # Card for product tuple
     │       └── ShoppingCart      # Show cart items (qty, product name, price and total)
     │   ├── pages                 # this directory is used to differentiate code based on page url
-    │       ├── Catalog           # page: catalog
-    │           ├── components    # this compoenent directory is used only for specific pages
-    │           ├── services      # this services directory is used only for specific pages
-    │           ├── styles        # this styles directory is used only for specific pages
-    │           ├── test          # this test directory is used only for specific pages
-    │           └── index.jsx     # index file for catalog pages
+    │       ├── Main              # page: Main page
+    │           ├── components    # this compoenent directory is used only for specific page
+    │           ├── services      # this services directory is used only for specific page
+    │           ├── styles        # this styles directory is used only for specific page
+    │           ├── test          # this test directory is used only for specific page
+    │           └── index.jsx     # index file for main page
     │   ├── redux                 # this directory is used to put actions & reducers
     │       ├── actions           # cart actions (addToCart, addQty, removeQty, removeItem)
     │       └── reducers          # cart reducers
@@ -29,6 +29,9 @@
     └── ...
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I try implementing react hooks api and using functional component instead of class component for clearer syntax, less line code, smaller file zise afer bundling also it is easier to share stateful logic between component. As you can see at ./src, there is components directory so all global components goes here; `<ProductCardComponent/>` to dislplay product tuple & `<ShoppingCartComponent/>` to display cart information.
+
+Then ./src/pages will store codes based on page url (eg: /main, /cart, /checkout, etc). Inside page component directory, there are components, services, styles, test, index that specificaly used by its page. ./src/redux to store actions and reducer so we can maintain event or middleware on that directory. Redux as state management use single soure of truth placed on ./src/store.js and for now only cart data used.
 
 ## Available Scripts
 
@@ -54,3 +57,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
+
+Gery Wibowo <br/>
+akun.gery@gmail.com

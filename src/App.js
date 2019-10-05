@@ -1,12 +1,12 @@
 import React from 'react';
-import Catalog from './pages/Catalog'
+import MainPage from './pages/Main'
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 
 function App() {
   return (
     <div className="App">
-      <Catalog/>
+      <MainPage/>
     </div>
   );
 }

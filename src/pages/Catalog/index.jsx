@@ -33,8 +33,6 @@ const CatalogPageIndex = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  console.log(metaData, catalog)
-
   return (
     <Grid container>
         {/* Heading */}

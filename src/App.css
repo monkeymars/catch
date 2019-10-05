@@ -28,3 +28,7 @@
 .btn-group__cart-actions span {
   margin-right: 8px;
 }
+
+.btn-group__cart-actions i {
+  cursor: pointer;
+}
